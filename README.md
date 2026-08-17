@@ -54,8 +54,12 @@ real one-line status).
 
 ## Conventions
 
-- Tags on card names: `tag-gold` (front-runner / apron / pick) and
-  `tag-green` (neutral label). Old names (`tag-pick`, `tag-apron`,
+- **Card layouts**: use `<div class="grid">` + `class="card"` for many
+  small cards (tile swatches); use `<div class="stack">` + `class="card wide"`
+  for pages with only a card or two — image on the left, details on the
+  right (stacks vertically on phones).
+- **Badges**: green (`tag-green`) = decided/chosen; gold (`tag-gold`) =
+  still open / TBD / front-runner. Old names (`tag-pick`, `tag-apron`,
   `tag-under`, `tag-floors`) still work.
 - Comparison tables use the `.cmp` block; highlight the winning cell with
   `class="diff"`.

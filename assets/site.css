@@ -62,6 +62,17 @@ a.link:hover { text-decoration:underline; }
 .tag-green, .tag-floors, .tag-under, .legend { color:#2f5d43; background:#e6f0e8; border-color:#cfe2d4; }
 .legend { display:inline-block; font-size:11px; padding:2px 7px; }
 
+/* Horizontal card — image left, details right. Use with .stack instead of
+   .grid on pages that only have a card or two per section. */
+.stack { display:flex; flex-direction:column; gap:18px; }
+.card.wide { flex-direction:row; }
+.card.wide .swatch { flex:0 0 230px; aspect-ratio:auto; min-height:230px; }
+.card.wide .body { flex:1; padding:16px 19px; }
+@media (max-width:560px) {
+  .card.wide { flex-direction:column; }
+  .card.wide .swatch { flex:none; }
+}
+
 /* Wide card (full-width image, e.g. cabinets) */
 .cab { background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
 .cab img { width:100%; display:block; }
