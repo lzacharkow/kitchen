@@ -1,0 +1,101 @@
+/* Shared styles for all kitchen-remodel pages.
+   Every page links this file — edit here and every page updates. */
+
+:root { --ink:#2b2622; --muted:#7a7068; --line:#e2dcd3; --bg:#faf8f5; --card:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; padding:44px 24px 80px; background:var(--bg); color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+.wrap { max-width:960px; margin:0 auto; }
+
+/* Header + site navigation (nav is filled in by assets/nav.js) */
+header { border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:30px; }
+nav.site-nav { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; }
+nav.site-nav a { font-size:13px; padding:5px 12px; border:1px solid var(--line); border-radius:999px;
+  background:var(--card); color:#5a4a34; text-decoration:none; }
+nav.site-nav a:hover { border-color:#c9bb9f; background:#fbf8f2; }
+nav.site-nav a.current { background:#3a332d; border-color:#3a332d; color:#faf8f5; font-weight:600; }
+h1 { font-size:30px; font-weight:600; letter-spacing:-.01em; margin:0 0 6px; }
+.sub { color:var(--muted); font-size:15px; margin:0; }
+
+/* Callout note */
+.note { background:#f3efe7; border:1px solid var(--line); border-left:3px solid #b9a88c;
+  border-radius:4px; padding:13px 17px; font-size:14px; color:#58504a; margin:0 0 34px; }
+.note strong { color:var(--ink); }
+
+/* Sections */
+h2 { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);
+  font-weight:600; margin:0 0 15px; }
+section { margin-bottom:42px; }
+
+/* Card grid */
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:18px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden;
+  display:flex; flex-direction:column; }
+
+/* Card image. Default: photo fills the square (crops to fit).
+   Add class "fit" for product shots on white — shows the whole image with padding. */
+.swatch { position:relative; background:#f0ebe3; aspect-ratio:1/1; }
+.swatch img { width:100%; height:100%; object-fit:cover; display:block; }
+.swatch.fit { background:#fff; }
+.swatch.fit img { object-fit:contain; padding:12px; }
+.swatch .code { position:absolute; bottom:8px; right:9px; font-size:11px; letter-spacing:.05em;
+  font-weight:600; padding:2px 6px; border-radius:3px; background:rgba(255,255,255,.82); color:#3a332d; }
+
+/* Card body */
+.body { padding:13px 15px 15px; }
+.name { font-size:17px; font-weight:600; margin:0 0 2px; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.meta { font-size:12px; color:var(--muted); margin:0 0 10px; }
+.why { font-size:13.5px; margin:0 0 9px; padding-left:10px; border-left:2px solid #d9d1c4; color:#4a433d; }
+.specs { list-style:none; margin:0 0 11px; padding:0; }
+.specs li { display:flex; justify-content:space-between; gap:10px; font-size:13px; padding:4px 0; border-top:1px dashed #e6ded2; }
+.specs li:first-child { border-top:none; }
+.specs li span:first-child { color:var(--muted); }
+a.link { font-size:12.5px; color:#6b5a44; text-decoration:none; }
+a.link:hover { text-decoration:underline; }
+
+/* Tags — two palettes; the named variants all map to one of them */
+.tag-gold, .tag-pick, .tag-apron,
+.tag-green, .tag-floors, .tag-under, .legend {
+  font-size:10.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  border-radius:3px; padding:2px 6px; border:1px solid; }
+.tag-gold, .tag-pick, .tag-apron { color:#7a5b1e; background:#f5edda; border-color:#e6d8b8; }
+.tag-green, .tag-floors, .tag-under, .legend { color:#2f5d43; background:#e6f0e8; border-color:#cfe2d4; }
+.legend { display:inline-block; font-size:11px; padding:2px 7px; }
+
+/* Wide card (full-width image, e.g. cabinets) */
+.cab { background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.cab img { width:100%; display:block; }
+.cab .body { padding:15px 17px 17px; }
+.cab .name { font-size:19px; }
+
+/* Comparison tables */
+table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line);
+  border-radius:6px; overflow:hidden; font-size:13.5px; }
+caption { caption-side:top; text-align:left; font-weight:600; font-size:14px; margin-bottom:9px; color:var(--ink); }
+th,td { padding:9px 13px; text-align:left; border-bottom:1px solid var(--line); }
+thead th { background:#f0ebe3; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; }
+tbody tr:last-child td { border-bottom:none; }
+td.diff { font-weight:700; color:#2f5d43; background:#e6f0e8; }
+.cmp { margin-bottom:24px; }
+.cmp .cap-note { font-size:13px; color:var(--muted); margin:8px 2px 0; }
+
+/* Resource link lists */
+ul.res { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:8px 18px; }
+ul.res li a { display:block; padding:9px 12px; background:var(--card); border:1px solid var(--line);
+  border-radius:5px; font-size:13.5px; color:#5a4a34; text-decoration:none; }
+ul.res li a:hover { border-color:#c9bb9f; background:#fbf8f2; }
+
+/* Table of contents (overview page) */
+ul.toc { list-style:none; margin:0; padding:0; }
+ul.toc li a { display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  padding:15px 18px; background:var(--card); border:1px solid var(--line); border-radius:6px;
+  margin-bottom:10px; text-decoration:none; color:var(--ink); }
+ul.toc li a:hover { border-color:#c9bb9f; background:#fbf8f2; }
+ul.toc .t { font-size:17px; font-weight:600; }
+ul.toc .s { font-size:12.5px; color:var(--muted); text-align:right; }
+ul.toc li a.empty { background:transparent; border-style:dashed; }
+ul.toc li a.empty .t { color:var(--muted); font-weight:500; }
+
+/* Footer */
+footer { border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--muted); }
+footer a { color:#5a4a34; }

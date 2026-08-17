@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ══════════════════════════════════════════════════════════════
+     NEW PAGE CHECKLIST
+     1. Copy this file to <topic>.html  (e.g. appliances.html)
+     2. Change the <title> and the <h1> / subtitle below
+     3. Add one line to the PAGES list in assets/nav.js
+     4. Put photos in images/<topic>/ and reference them like
+        images/appliances/range.jpg  (remote URLs work too)
+     ══════════════════════════════════════════════════════════════ -->
+<title>Kitchen ___ — Options</title>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/nav.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <nav id="site-nav" class="site-nav"></nav>
+    <h1>Kitchen ___</h1>
+    <p class="sub">Kitchen remodel · options under consideration · updated ___</p>
+  </header>
+
+  <!-- Optional intro callout -->
+  <p class="note">
+    <strong>What this page covers.</strong>
+    A sentence or two of context — what's being compared, what's already decided.
+  </p>
+
+  <section>
+    <h2>The options</h2>
+    <div class="grid">
+
+      <!-- Card with a LOCAL photo (default: photo fills the square, crops to fit) -->
+      <div class="card">
+        <div class="swatch"><img src="images/TOPIC/photo.jpg" alt="Describe the item"><span class="code">MODEL-NO</span></div>
+        <div class="body">
+          <p class="name">Item Name <span class="tag-green">Tag</span></p>
+          <p class="meta">One-line description · finish · size</p>
+          <ul class="specs">
+            <li><span>Spec label</span><span>Value</span></li>
+            <li><span>Another spec</span><span>Value</span></li>
+          </ul>
+          <a class="link" href="https://example.com" target="_blank" rel="noopener">View product →</a>
+        </div>
+      </div>
+
+      <!-- Card with a REMOTE product shot on white — add class "fit" so the
+           whole image shows with padding instead of cropping -->
+      <div class="card">
+        <div class="swatch fit"><img src="https://example.com/product.jpg" alt="Describe the item"><span class="code">MODEL-NO</span></div>
+        <div class="body">
+          <p class="name">Item Name <span class="tag-gold">Front-runner</span></p>
+          <p class="meta">One-line description</p>
+          <ul class="specs">
+            <li><span>Spec label</span><span>Value</span></li>
+          </ul>
+          <a class="link" href="https://example.com" target="_blank" rel="noopener">View product →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Optional: comparison table section (delete if not needed) -->
+  <section>
+    <h2>Comparison</h2>
+    <div class="cmp">
+      <table>
+        <caption>Option A vs. Option B</caption>
+        <thead><tr><th>Attribute</th><th>Option A</th><th>Option B</th><th>Difference</th></tr></thead>
+        <tbody>
+          <tr><td>Something</td><td>Value</td><td>Value</td><td class="diff">+X</td></tr>
+        </tbody>
+      </table>
+      <p class="cap-note">A sentence interpreting the table.</p>
+    </div>
+  </section>
+
+  <footer>
+    Sources, spec sheets, or notes go here.
+  </footer>
+</div>
+</body>
+</html>
